@@ -3,11 +3,7 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 jobs:
-def test_average():
-    assert average([1, 2, 3, 4, 5]) == 3.0
-    assert average([10, 20, 30, 40, 50]) == 30.0
-    assert average([0, 0, 0, 0, 0]) == 0.0
-    assert average([-1, 1]) == 0.0
+    
     docker:
       - image: cimg/base:stable
     steps:
@@ -15,7 +11,11 @@ def test_average():
       # Replace this with a real test runner invocation
       - run:
           name: Run tests
-          command: echo 'replace me with real tests!' && false
+          command: echo def test_average():
+    assert average([1, 2, 3, 4, 5]) == 3.0
+    assert average([10, 20, 30, 40, 50]) == 30.0
+    assert average([0, 0, 0, 0, 0]) == 0.0
+    assert average([-1, 1]) == 0.0 && false
   build:
     docker:
       - image: cimg/base:stable
